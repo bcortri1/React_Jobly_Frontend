@@ -1,0 +1,21 @@
+.Home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10%;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+}
+
+.Home a {
+    margin: 2px;
+    font-weight: bold;
+}
+
+.Home p {
+    font-weight: bold;
+}
+
+.Home h1 {
+    font-weight: bold;
+}

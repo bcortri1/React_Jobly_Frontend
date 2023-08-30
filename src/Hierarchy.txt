@@ -1,0 +1,55 @@
+PLANNED HIERARCHY (Subject To Change)
+
+App = "General component wrapper"
+    state = currUser => useLocalStorage("userToken")
+    functions = login, signup, logout
+
+    #Route included in all routes
+        NavBar = "NavLinks and logout/login link that changes"
+            props = { currUser="", logout()}
+
+    #Route /signup
+        SignUpForm = "Form with inputs for new user"
+            state = formData
+            props = signup() OR hook
+            inputs = [username, password, firstName, lastName, email]
+
+    #Route /login
+        LoginForm = "Allows user to login"
+            props = login()
+            inputs = [username, password]
+
+    #Route /profile
+        ProfileForm = "Form with inputs regarding current user"
+            state = formData
+            props = { currUser }
+
+    #Route /jobs
+        JobList = "Contains state of all Job components and renders them in a list"
+            state = jobs
+            props = { companyId="" }
+
+            SearchBar = "Input that allows one to search for companies or jobs"
+                props = { type "companies || jobs" }
+
+            JobCard = "Card that has all details of a job with application button"
+                props = {title, company, salary, equity}
+
+    #Route /companies
+        CompanyList = "List of Company components"
+            state = companies
+
+            SearchBar = "Input that allows one to search for companies or jobs"
+                props = { type "companies || jobs" } COULD BE 
+
+            CompanyCard = "Component that links to list of Jobs for company"
+                props = { company }
+
+            #Route /companies/:companyId
+                CompanyDetail = "Display company Title and description"
+                    JobList = "Contains state of all Job components and renders them in a list"
+                        state = jobs
+                        props = {companyId=""}
+
+                        JobCard = "Card that has all details of a job"
+                            props = {title, company, salary, equity}

@@ -1,0 +1,15 @@
+.CompanyCard {
+    text-align: left;
+
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.CompanyCard .card-text {
+    font-size: smaller;
+}
+
+.CompanyLink {
+    text-decoration: none;
+    color: black;
+}

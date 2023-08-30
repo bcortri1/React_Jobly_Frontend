@@ -1,0 +1,23 @@
+.JobCard {
+    text-align: left;
+    padding: 10px;
+}
+
+.JobCard button {
+    float: inline-end;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.JobCard .card-title {
+    padding-bottom: 0px;
+}
+
+.JobCard .card-subtitle {
+    font-size: smaller;
+}
+
+.JobCard .card-text {
+    margin: 0px;
+    font-size: smaller;
+}
